@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Character {
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	private String playerName;
 	private String characterName;
 	@Autowired

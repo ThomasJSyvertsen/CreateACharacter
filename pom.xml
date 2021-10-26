@@ -8,7 +8,7 @@
 		<version>2.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>dnd</groupId>
+	<groupId>character</groupId>
 	<artifactId>CreateACharacter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CreateACharacter</name>
