@@ -10,9 +10,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import character.beans.Character;
 import character.beans.Attributes;
 import character.beans.Items;
+import character.beans.Player;
 import character.controller.BeanConfiguration;
 import character.repository.CharacterRepository;
 
@@ -31,7 +31,7 @@ CommandLineRunner {
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
 
 		// Using an existing bean
-		Character c1 = appContext.getBean("character", Character.class);
+		Player c1 = appContext.getBean("player", Player.class);
 		
 		repo.save(c1);
 
@@ -40,13 +40,13 @@ CommandLineRunner {
 		Items items2 = new Items("Immovable Rod",
 				"This is a rod. It does not " + "move.(unless you want it to... then it might)",
 				"It is indestructible");
-		Character c2 = new Character("Cal", "Boi", att2, 25, 25, 5, items2);
+		Player c2 = new Player("Cal", "Boi", 25, 25, 5, att2, items2);
 
 		repo.save(c2);
 
-		List<Character> allMyCharacters = repo.findAll();
+		List<Player> allMyCharacters = repo.findAll();
 
-		for (Character eachChar : allMyCharacters) {
+		for (Player eachChar : allMyCharacters) {
 			System.out.println(eachChar.toString());
 		}
 

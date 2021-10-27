@@ -10,71 +10,45 @@ import javax.persistence.Embeddable;
 public class Items {
 	String name;
 	String description;
-	String condition;
-
-	/**
-	 * 
-	 */
+	String damage;
+	
 	public Items() {
 		super();
 	}
 
-	/**
-	 * @param name
-	 * @param description
-	 * @param condition
-	 */
-	public Items(String name, String description, String condition) {
+	public Items(String name, String description, String damage) {
 		super();
 		this.name = name;
 		this.description = description;
-		this.condition = condition;
+		this.damage = damage;
 	}
 
-	/**
-	 * @return the name
-	 */
 	public String getName() {
 		return name;
 	}
 
-	/**
-	 * @param name the name to set
-	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	/**
-	 * @return the description
-	 */
 	public String getDescription() {
 		return description;
 	}
 
-	/**
-	 * @param description the description to set
-	 */
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
-	/**
-	 * @return the condition
-	 */
-	public String getCondition() {
-		return condition;
+	public String getDamage() {
+		return damage;
 	}
 
-	/**
-	 * @param condition the condition to set
-	 */
-	public void setCondition(String condition) {
-		this.condition = condition;
+	public void setDamage(String damage) {
+		this.damage = damage;
 	}
 
 	@Override
 	public String toString() {
-		return ("[name=" + name + ", description=" + description + ", condition=" + condition + "]");
-	}
+		return "Items [name=" + name + ", description=" + description + ", damage=" + damage + "]";
+	}	
 }

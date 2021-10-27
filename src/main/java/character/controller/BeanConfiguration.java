@@ -3,16 +3,16 @@ package character.controller;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import character.beans.Character;
 import character.beans.Attributes;
 import character.beans.Items;
+import character.beans.Player;
 
 @Configuration
 public class BeanConfiguration {
 	
 	@Bean
-	public Character character() {
-		Character bean = new Character("Thomas", "Almi", 20, 20, 10);
+	public Player player() {
+		Player bean = new Player("Thomas", "Almi", 20, 20, 10);
 		return bean;
 	}
 
